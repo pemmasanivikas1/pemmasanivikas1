@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function myvalidate(form) {
+            var myusername = form.username.value;
+            var mypasssword = form.password.value;
+            if (myusername.length === 0) {
+
+                alert("you must enter valid username..")
+                return false;
+            }
+
+            if (mypassword.length === 0) {
+                alert("you must enter valid password")
+                return false;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h1> Login form </h1>
+    <form action="/javascript/Succes.html" onsubmit="return myvalidate(this)">
+
+        User Name: <input type="text" name="username" size="10"> <br>
+        Password: <input type="password" name="password" size="10"> <br>
+
+        <input type="submit">
+    </form>
+</body>
+
+</html>

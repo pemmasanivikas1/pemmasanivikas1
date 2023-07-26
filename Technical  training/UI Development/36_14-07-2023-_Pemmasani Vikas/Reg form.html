@@ -1,0 +1,89 @@
+<html>
+
+<head>
+    <title>Registration Page Form</title>
+    <script>
+        function loginvalidate(form) {
+            var myfirstname = form.firstname.value;
+            if (myfirstname.length === 0) {
+                alert("you must valid firstname")
+                return false;
+            }
+            var mymiddlename = form.middlename.value;
+            if (mymiddlename.length === 0) {
+                alert("you must enter middlename")
+                return false;
+            }
+            var mylastname = form.lastname.value;
+            if (mylastname.length === 0) {
+                alert("you must enter lastname")
+                return false;
+            }
+            var myemail = form.email.value;
+            if (myemail.length === 0) {
+                alert("you must enter email")
+                return false;
+            }
+            var mypassword = form.password.value;
+            if (mypassword.length === 0) {
+                alert("you must enter password")
+                return false;
+            }
+            var mypasswordrepeat = form.passwordrepeat.value;
+            if (mypasswordrepeat.length === 0) {
+                alert("you must enter passwordrepeat")
+                return false;
+            }
+            var mynumber = form.number.value;
+            if (mynumber.length === 0) {
+                alert("you must enter number")
+                return false;
+            }
+            var mydropdown = form.dropdown.value;
+            if (mydropdown.length === 0) {
+                alert("you must enter dropdown")
+                return false;
+            }
+        }
+    </script>
+</head>
+
+<body style="text-align: center; background-color: darkkhaki;">
+    <form action=" " onsubmit="return loginvalidate(this)">
+        <h2>Register form</h2>
+        First Name:<input type="text" name="firstname" placeholder="firstname"><br><br>
+        Middle Name:<input type="text" name="middlename" placeholder="middlename"><br><br>
+        Last Name:<input type="text" name="lastname" placeholder="lastname"><br><br>
+        <label for="email">Email</label>
+        <input type="text" placeholder="Enter Email" name="email"><br><br>
+
+        <label for="password">Password</label>
+        <input type="password" placeholder="Enter Password" name="password"><br><br>
+
+        <label for="psw-repeat">Repeat Password</label>
+        <input type="password" placeholder="Repeat Password" name="passwordrepeat"><br><br>
+        Contact: <input type="number" placeholder="contact" name="number"><br><br>
+
+        Select Languages:
+        <select name="dropdown">
+            <option value="language">Choose Language</option>
+            <option value="English">English</option>
+            <option value="Telugu">Telugu</option>
+            <option value="Hindi">Hindi</option>
+        </select><br><br>
+
+        Gender:
+        <input type="radio" name="male">Male
+        <input type="radio" name="female">Female
+        <input type="radio" name="others">Others<br><br>
+        Select Courses:
+
+        <input type="checkbox" name="html">HTML5
+        <input type="checkbox" name="css">CSS3
+        <input type="checkbox" name="bootstrap">BOOTSTRAP5<br><br>
+        <textarea name="textarea" cols="30" rows="10" placeholder="text"></textarea><br><br>
+        <input type="submit">
+    </form>
+</body>
+
+</html>
